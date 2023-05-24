@@ -1,0 +1,36 @@
+name: Monitor
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "*/5 * * * *"
+
+env:
+    GIT_CONFIG_NAME: "[bot] RUNNING"
+    GIT_CONFIG_EMAIL: "action@github.com"
+    GIT_COMMIT_MESSAGE: "[actions] Updated README"
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: "18.x"
+                  cache: "npm"
+
+            - name: 🚧 Preparing run
+              run: npm ci
+
+            - name: 🛸 Pinging sites
+              run: npm start
+
+            - name: 🚀 Push changes
+              uses: Youssef_Lehmam/gh-push-action@v1.0.6
+              with:
+                  local-username: ${{ env.GIT_CONFIG_NAME }}
+                  local-email: ${{ env.GIT_CONFIG_EMAIL }}
+                  commit-message: ${{ env.GIT_COMMIT_MESSAGE }}
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
