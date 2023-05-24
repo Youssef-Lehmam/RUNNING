@@ -28,6 +28,7 @@ jobs:
               run: npm start
 
             - name: 🚀 Push changes
+              uses: ad-m/github-push-action@master
               with:
                   local-username: ${{ env.GIT_CONFIG_NAME }}
                   local-email: ${{ env.GIT_CONFIG_EMAIL }}
