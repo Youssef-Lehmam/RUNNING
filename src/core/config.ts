@@ -50,7 +50,7 @@ export const getConfig = async () => {
 export const ConfigEntityDefaults = {
     method: "get" as IConfigEntityMethod,
     headers: {
-        "User-Agent": "[bot] github.com/zyrouge/web-status-monitor",
+        "User-Agent": "[bot] github.com/Youssef_Lehmam/RUNNING",
     },
 };
 
