@@ -28,7 +28,6 @@ jobs:
               run: npm start
 
             - name: 🚀 Push changes
-              uses: Youssef_Lehmam/gh-push-action@v1.0.6
               with:
                   local-username: ${{ env.GIT_CONFIG_NAME }}
                   local-email: ${{ env.GIT_CONFIG_EMAIL }}
