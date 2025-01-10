@@ -1,5 +1,5 @@
 # IS MY WEBSITE RUNNING ? [![](https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86)](https://github.com/sponsors/Youssef-Lehmam)
 
-Last updated: **1/10/2025, 4:59:41 PM**
+Last updated: **1/10/2025, 5:21:19 PM**
 
-- `GET` [https://youssefservice.me](https://youssefservice.me) - **Up** (280ms)
+- `GET` [https://youssefservice.me](https://youssefservice.me) - **Up** (115ms)
